@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smash Karts 部屋一覧</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>Smash Karts 部屋一覧</header>
+
+<div class="container">
+
+  <div id="server-list">
+
+    <!-- 初期サーバー1 -->
+    <div class="server-item">
+      <div class="option" onclick="toggleDesc(this)">Smash Karts に遊びに行こう（旗6戦）</div>
+      <div class="description">
+        <p><strong>部屋:</strong> asia776074</p>
+        <p><strong>アリーナ:</strong> スカイアリーナ</p>
+        <p><strong>ルール:</strong> スノーボールしか使えないアリーナでチームと6つの旗を奪い合います。</p>
+        <a class="option" href="https://smashkarts.io/link/?mode=347177022&room=asia776074&arena=skyarena-showdown" target="_blank">参加する</a>
+      </div>
+    </div>
+
+    <!-- 初期サーバー2 -->
+    <div class="server-item">
+      <div class="option" onclick="toggleDesc(this)">Smash Karts に遊びに行こう（複数人対戦）</div>
+      <div class="description">
+        <p><strong>部屋:</strong> asia755853</p>
+        <p><strong>アリーナ:</strong> スカイアリーナ</p>
+        <p><strong>ルール:</strong> 複数人で対戦する</p>
+        <a class="option" href="https://smashkarts.io/link/?mode=335546938&room=asia755853&arena=skyarena-showdown" target="_blank">参加する</a>
+      </div>
+    </div>
+
+    <!-- 初期サーバー3 -->
+    <div class="server-item">
+      <div class="option" onclick="toggleDesc(this)">Smash Karts に遊びに行こう（最大難易度旗戦）</div>
+      <div class="description">
+        <p><strong>部屋:</strong> asia711161</p>
+        <p><strong>アリーナ:</strong> スカイアリーナ</p>
+        <p><strong>ルール:</strong> 武器が使えないアリーナでチームと20つの旗を奪い合います。</p>
+        <a class="option" href="https://smashkarts.io/link/?mode=344260670&room=asia711161&arena=skyarena-showdown" target="_blank">参加する</a>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="add-server-btn" onclick="showForm()">サーバー追加</button>
+
+  <div id="form-container" style="display:none;">
+    <div class="form-group">
+      <input type="text" id="server-name" placeholder="サーバー名">
+    </div>
+    <div class="form-group">
+      <input type="text" id="server-ip" placeholder="リンクまたはIP">
+    </div>
+    <div class="form-group">
+      <input type="text" id="server-arena" placeholder="アリーナ">
+    </div>
+    <div class="form-group">
+      <input type="text" id="server-rules" placeholder="ルール">
+    </div>
+    <button class="submit-btn" onclick="addServer()">追加</button>
+    <button class="submit-btn cancel-btn" onclick="cancelAdd()">キャンセル</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
